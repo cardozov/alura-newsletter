@@ -5,7 +5,9 @@ const Article = ({ title, text, tags, image, alt }) => {
       {
         text.map((content, index) => <p key={index} className="text-alura-200 dark:text-gray-400">{content}</p>)
       }
-    </div>
+    </div> 
+    { image && <img className="sm:p-4" src={image} /> }
+    { image && alt && <span className="sr-only">{alt}</span> }
   </div>
 }
 
